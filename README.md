@@ -1,5 +1,4 @@
 # Ziegel
+Some boilerplate tensorflow code and architecture for building complex and configurable deep learning applications.
 
-My tensorflow based architecture for building complex and configurable deep learning applications
-
-![image](https://user-images.githubusercontent.com/1433964/59631675-62898b00-9116-11e9-894a-fc599fad0e8b.png)
+![cauldron](https://user-images.githubusercontent.com/1433964/60028794-f8b93600-966d-11e9-97c7-35676aa2ae98.png)
