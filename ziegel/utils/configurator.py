@@ -12,10 +12,9 @@ proj_dir = root.joinpath("ziegel")
 if root not in sys.path:
     sys.path.append(str(proj_dir))
 
-
 class ConfigBuilder:
     def __init__(self):
-        self._num_attributes = 0
+        self._num_attributes = num_attributes
 
     def __iter__(self):
         """
@@ -28,7 +27,14 @@ class ConfigBuilder:
         """
         for attr_name, attr_val in self.__dict__.items():
             yield attr_name, attr_val
-        
+    
+    @property
+    def num_attributes(self):
+        """
+        A getter method for number of attributes
+        """
+        return self._num_attributes
+
     def set_config(self, key, val):
         """
         Set config attribute

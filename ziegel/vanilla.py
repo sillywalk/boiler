@@ -35,7 +35,7 @@ class Vanilla:
             b_init = tf.random_uniform([n_neurons], minval=-1.0, maxval=1.0, seed=1729)
             W = tf.Variable(W_init(shape=(input_size, n_neurons)), name="weights")
             b = tf.Variable(b_init, name="biases")
-            z = tf.matmul(X, W) + b
+            z = tf.matmul(prev_layer, W) + b
             if activation.casefold() == 'relu'.casefold():
                 z = tf.nn.relu(z)
             elif activation.casefold() == 'tanh'.casefold():
@@ -46,7 +46,7 @@ class Vanilla:
     
     def _construct_dnn(self, scope):
         """
-        Constructs 
+        Constructs a dee
         """
         with tf.name_scope(scope):
             for layer_name, layer_info in self.config["layers"].items():

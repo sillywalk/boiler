@@ -1,0 +1,20 @@
+n_layers: 2
+
+input:
+  name: "input"
+
+layers: 
+  layer1:
+    name: "hidden_1"
+    n_neurons: 300
+    activation: "relu" 
+  layer2:
+    name: "hidden_2"
+    n_neurons: 100
+    activation: "relu"     
+
+output:
+  name: "output"
+  n_neurons: 10
+  activation: None 
+  
